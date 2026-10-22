@@ -1,35 +1,21 @@
-# Far From Home — editable multimodal website
+# Far From Home — interview-led website (two interviews)
 
-Project 3, ENGL 1301 — working draft with one interview.
+The project is an editorial multimodal web essay built from two international-student interviews.
 
-## How to view
-1. Extract the whole ZIP (do not open the HTML while it is still inside the archive).
-2. Open `index.html` in Chrome or Edge. Internet is not needed.
-3. Keep all files together so the styling, interactions, and audio can load.
+## Structure
+- `index.html`: essay, comparison, sources, and BOTH transcripts (edit research writing here).
+- `styles.css`: layout, colors, typography, audio cards, responsive design.
+- `script.js`: interactive three-homes selector, mobile menu and progressive audio detection.
+- `assets/interview-01.m4a`: first interview, approximately 5:07.
+- `assets/interview-02.m4a`: second interview, approximately 5:51.
+- `interview-transcript.txt`: interviewer-corrected first transcript.
+- `interview-02-transcript.txt`: second subtitle-based transcript; uncertain phrases flagged.
 
-## Project files
-- `index.html` — webpage structure, written content, participant transcript. Edit text and sections here.
-- `styles.css` — typography, colors, layouts, responsiveness, audio panel. Colors are near the top under `:root`.
-- `script.js` — interactive journey tabs, place selector, theme lenses, reflection controls. Update data inside `stages`, `places`, and `data`.
-- `assets/interview-01.m4a` — audio from the interview video. The HTML audio player loads this relative file.
-- `interview-transcript.txt` — convenient separate text transcript for editing and verifying uncertain words.
+## Working locally
+Open `index.html` in Chrome or Edge, ideally using VS Code Live Server. Keep the assets folder beside the HTML file.
 
-## Adding more interviews
-Duplicate the `<section class="interview-media">` block in `index.html`, change headings and text,
-put the next recording in `assets/`, and update the `src` for that new audio player.
-Replace any unclear transcription with verified words after listening to the recording.
+## Publishing to GitHub Pages
+The text/structure may be updated independently from media. When uploading `assets/interview-02.m4a`, use the GitHub file upload option in the assets folder or Git. The player automatically appears when the media is available. Verify that the participant's permission explicitly includes sharing the audio publicly.
 
-## Additional media
-Place photos in `assets/` and insert an image in index.html, e.g.:
-`<img src="assets/library.jpg" alt="TTU library study space">`
-Use meaningful alt text, and request permission for identifiable people.
-
-## Important research notes
-- This site currently draws on ONE interview; avoid making claims about all international students.
-
-Website prepared for GitHub Pages deployment.
-- The interview participant's identity is not displayed. The interviewer states they have consent to include the audio.
-- The caption-based transcript contains `[unclear]` markers. Verify exact quotations before final submission.
-- Proposed observations and later interviews are labelled as future research.
-- `index.html` is the main file to submit/publish along with the entire folder and media, not by itself.
-- A separate formal Statement of Goals and Choices of at least 750 words is still required for the final assignment.
+## Editorial safeguards
+Interview 02 captions are automatic and contain errors, especially the answer about feeling at home. Avoid presenting the unclear portions as verbatim. The website distinguishes preliminary interpretation from research data, and photographs are credited reference images rather than field observations. This is a working draft, not generalizable research.
