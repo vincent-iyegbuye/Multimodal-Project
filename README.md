@@ -26,6 +26,8 @@ Use meaningful alt text, and request permission for identifiable people.
 
 ## Important research notes
 - This site currently draws on ONE interview; avoid making claims about all international students.
+
+Website prepared for GitHub Pages deployment.
 - The interview participant's identity is not displayed. The interviewer states they have consent to include the audio.
 - The caption-based transcript contains `[unclear]` markers. Verify exact quotations before final submission.
 - Proposed observations and later interviews are labelled as future research.
