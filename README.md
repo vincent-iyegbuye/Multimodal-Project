@@ -11,7 +11,7 @@ Open `index.html` or publish the entire folder through GitHub Pages (main branch
 3. Life Beyond Campus — mobility, transport, cultural and financial access
 4. What Makes a Place Home? — equal-weight interactive comparison of four voices
 5. What I Discovered — interviewer's research interpretation and questions still open
-Then: source archive with four unabridged recordings, four transcripts, research methods, secondary sources and photographic credits.
+Then: an illustrated Observations & field notes guide for future campus visits, followed by the source archive with four unabridged recordings, four transcripts, research methods, secondary sources and photographic credits. The guide contains photo-based descriptions and observation prompts; firsthand visit notes have not yet been collected.
 
 ## Files
 - `index.html`: documentary narrative, accessible chapter headings, photos, transcripts and sources.
@@ -20,8 +20,10 @@ Then: source archive with four unabridged recordings, four transcripts, research
 - `script.js`: mobile navigation.
 - `chapters.js`: interactive four-voice comparison.
 - `audio-player.css` and `audio-player.js`: shared audio controls for the five chapter clips and four full interviews, with seeking, mute, playback speed and native controls when JavaScript is unavailable.
+- `field-notes.css`: responsive campus visit guide with photo cards and observation questions.
 - `assets/`: all four source recordings, including `interview-04.m4a` (public-sharing consent confirmed by interviewer).
 - `assets/moments/`: five short MP3 excerpts used by the chapter audio players.
+- `assets/field-notes/`: locally stored, credited campus reference photographs; see the attribution README in that folder.
 - `Interview_Transcripts_Accessibility.docx`: class accessibility transcript (review caption edits before submission).
 - `Statement_of_Goals_and_Choices.docx`: prior editable statement; review/update it to describe this five-chapter version.
 
