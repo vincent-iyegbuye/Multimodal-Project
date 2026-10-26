@@ -1,25 +1,21 @@
-/* Interactive four-voice comparison and selected listening moments. */
-(()=>{
-const stories={
-p1:{label:"PARTICIPANT 01 / THREE HOMES",title:"Nigeria, Virginia, Lubbock",body:"She describes Nigeria as a first home, Virginia as a second, and Lubbock as a third. She feels welcomed at Texas Tech while keeping close ties to family elsewhere.",detail:"Classes, events and the library feel comfortable, but she says she has no family or close friends in Lubbock.",insight:"My interpretation: finding another home does not erase earlier ones.",transcript:"full-transcript-01"},
-p2:{label:"PARTICIPANT 02 / DEEPER CONNECTIONS",title:"Welcomed, but not yet home",body:"He enjoys Texas Tech but has not developed the deep connections needed to consider Lubbock his second home.",detail:"Making friends was initially difficult. Hackathons, library workshops and church have helped, while family in Houston remains important.",insight:"My interpretation: a welcome is not the same as a deep attachment.",transcript:"full-transcript-02"},
-p3:{label:"PARTICIPANT 03 / TIME AND FRIENDSHIP",title:"A familiar city through friends and church",body:"After several years at Texas Tech she describes friends and church as a community she enjoys, while Dallas still matters in her idea of a second home.",detail:"She advises newcomers not to rush into groups just to fit in, and describes how not driving affects where she can go.",insight:"My interpretation: spending years somewhere creates routines, but time alone does not settle what home means.",transcript:"full-transcript-03"},
-p4:{label:"PARTICIPANT 04 / CULTURAL COMMUNITY",title:"The people rather than the city",body:"She separates Lubbock as a physical location from a cultural and church community that feels like home.",detail:"She discusses cultural barriers to friendships, her campus job, SWE meetings and bus transportation.",insight:"My interpretation: someone can belong in a community without feeling equally at home throughout the city.",transcript:"full-transcript-04"}};
-const box=document.getElementById("place-story");
-const buttons=[...document.querySelectorAll("[data-participant]")];
-const el=(tag,klass,txt)=>{const n=document.createElement(tag);if(klass)n.className=klass;n.textContent=txt;return n;};
-if(box){buttons.forEach(button=>button.addEventListener("click",()=>{
-const d=stories[button.dataset.participant];if(!d)return;
-buttons.forEach(b=>b.setAttribute("aria-pressed",String(b===button)));
-const note=el("div","home-evidence","");note.append(el("span","home-evidence-label","From the interview"),el("p","",d.detail));
-const link=el("a","home-transcript-link","Read Interview "+d.transcript.slice(-2));link.href="#"+d.transcript;
-box.replaceChildren(el("p","place-small",d.label),el("h3","",d.title),el("p","",d.body),note,el("p","place-interpretation",d.insight),link);
-}));}
-const clips=[...document.querySelectorAll("audio.excerpt-player")];
-clips.forEach(audio=>{
-const start=Number(audio.dataset.start||0),end=Number(audio.dataset.end||Infinity);
-audio.addEventListener("loadedmetadata",()=>{if(start<audio.duration)audio.currentTime=start;});
-audio.addEventListener("play",()=>{clips.forEach(other=>{if(other!==audio)other.pause()});if(audio.currentTime<start-.5||audio.currentTime>=end)audio.currentTime=start;});
-audio.addEventListener("timeupdate",()=>{if(audio.currentTime>=end){audio.pause();audio.currentTime=start;}});
-});
+/* Five-chapter documentary: four-source comparison and time-bounded audio moments. */
+(() => {
+ const stories={
+  p1:{label:'PARTICIPANT 01 / THREE HOMES',title:'Nigeria, Virginia, Lubbock',body:'She describes Nigeria as a first home, Virginia as a second, and Lubbock as a third. She enjoys being welcomed at Texas Tech while still feeling closest to family and friendships elsewhere.',evidence:'Classes, events and the library feel comfortable. But she says she has no family or close friends in Lubbock.',interpretation:'My interpretation: finding another home does not erase earlier ones.',transcript:'full-transcript-01'},
+  p2:{label:'PARTICIPANT 02 / DEEPER CONNECTIONS',title:'Welcomed, but not yet home',body:'He describes Texas Tech as friendly and enjoys campus activities, but he has not developed the deep connections that would make Lubbock feel like a second home.',evidence:'He initially found it difficult to make friends. Hackathons, library workshops and church have helped; family in Houston still matters deeply.',interpretation:'My interpretation: being invited into a community is different from feeling attached enough to call it home.',transcript:'full-transcript-02'},
+  p3:{label:'PARTICIPANT 03 / TIME AND FRIENDSHIP',title:'A familiar city through friends and church',body:'After several years at Texas Tech, she describes friendships and church as a community she enjoys. Dallas is still important when she thinks about a second home.',evidence:'She cautions new students not to force friendships just to fit in. She also describes difficulty moving around the city without driving.',interpretation:'My interpretation: staying longer can build routines, but a sense of home is not guaranteed by time alone.',transcript:'full-transcript-03'},
+  p4:{label:'PARTICIPANT 04 / CULTURAL COMMUNITY',title:'The people, rather than the city',body:'She separates the city of Lubbock from the people who make her feel understood. Church and a cultural community can feel like home even if the place itself does not.',evidence:'She describes cultural barriers to friendship, support at her campus job, SWE meetings and the practical importance of buses.',interpretation:'My interpretation: someone can belong within a community without feeling equally at home everywhere around it.',transcript:'full-transcript-04'}
+ };
+ const box=document.getElementById('place-story');
+ const buttons=[...document.querySelectorAll('[data-participant]')];
+ const make=(name,cls,text)=>{const el=document.createElement(name);if(cls)el.className=cls;el.textContent=text;return el;};
+ if(box&&buttons.length===4){
+   buttons.forEach(b=>b.addEventListener('click',()=>{
+     const x=stories[b.dataset.participant];if(!x)return;
+     buttons.forEach(btn=>btn.setAttribute('aria-pressed',String(btn===b)));
+     const note=make('div','home-evidence','');note.append(make('span','home-evidence-label','From the interview'),make('p','',x.evidence));
+     const link=make('a','home-transcript-link','Read Interview '+x.transcript.slice(-2));link.href='#'+x.transcript;
+     box.replaceChildren(make('p','place-small',x.label),make('h3','',x.title),make('p','',x.body),note,make('p','place-interpretation',x.interpretation),link);
+   }));
+ }
 })();

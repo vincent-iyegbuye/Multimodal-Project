@@ -1,24 +1,31 @@
-# Far From Home — Four Interviews and Secondary Research
+# Far From Home — Five-chapter interactive documentary
 
-ENGL 1301 inquiry-based multimodal web essay, October 2026.
+ENGL 1301 | Texas Tech University | October 2026
 
-## Published website
-https://vincent-iyegbuye.github.io/Multimodal-Project/
+## How to view and publish
+Open `index.html` or publish the entire folder through GitHub Pages (main branch, repository root). Keep the `assets` directory and all `.css` and `.js` files together. Each chapter audio player plays a short timed excerpt from one of the full interview recordings; no duplicate audio files are needed.
 
-The website has four participant interviews, audio players, four readable interview transcripts, interactive comparisons of home, verified university/local-source links and academic research about belonging.
+## Story structure
+1. Arriving in Lubbock — expectations and actual first impressions
+2. Finding Your People — library, TOR, work, friendships and TTU services
+3. Life Beyond Campus — mobility, transport, cultural and financial access
+4. What Makes a Place Home? — equal-weight interactive comparison of four voices
+5. What I Discovered — interviewer's research interpretation and questions still open
+Then: source archive with four unabridged recordings, four transcripts, research methods, secondary sources and photographic credits.
 
 ## Files
-- `index.html` — research essay, TOR community feature, citations and transcripts.
-- `styles.css` — responsive editorial presentation.
-- `script.js` — navigation, home selector and media loading.
-- `assets/` — original interview audio. Interview 04 must exist as `assets/interview-04.m4a` for its player to appear.
-- `interview-transcript.txt`, `interview-02-transcript.txt`, `interview-03-transcript.txt` — earlier transcripts; the fourth transcript is included in the HTML and complete downloadable project package.
+- `index.html`: documentary narrative, accessible chapter headings, photos, transcripts and sources.
+- `styles.css`: original editorial design.
+- `chapters.css`: layout for new chapters, contextual listening, and four voices.
+- `script.js`: mobile navigation.
+- `chapters.js`: responsive four-voice comparison and bounded clip playback.
+- `assets/`: all four source recordings, including `interview-04.m4a` (public-sharing consent confirmed by interviewer).
+- `Interview_Transcripts_Accessibility.docx`: class accessibility transcript (review caption edits before submission).
+- `Statement_of_Goals_and_Choices.docx`: prior editable statement; review/update it to describe this five-chapter version.
 
-## Image credits / publication rights
-The campus photographs link to licensed CC BY-SA 4.0 Wikimedia Commons sources. TOR photos are **linked from the organization's own website** and attributed to the organization, but no general republication license was verified. Ask TOR for permission before relying on those photos in the final public project, or substitute permission-cleared images. Linked external image paths may change or block embedding.
-
-## Research limitations
-Four interviews do not represent the university's entire international student population. Earlier participants' transcripts were interviewer-corrected; later transcripts include caption-derived paraphrase. Do not present unverified passages as verbatim. The website does not claim firsthand field observations that were not collected.
-
-## Assignment requirements
-The separately downloadable research-enhanced project contains a 919-word **editable proposed Statement of Goals and Choices** and an **Interview Transcripts Accessibility** Word document. These still need review for factual and transcription accuracy before class submission. GitHub repository files alone do not contain those Word documents.
+## Academic and ethical notes
+- Four student interviews are primary sources, not a representative sample of international students at TTU.
+- Interviews 03 and 04 have portions edited/paraphrased from automatic captions and are not word-for-word transcripts.
+- Campus photos are credited licensed archival references, not firsthand field observations.
+- TOR's official photos have not been verified as open-licensed. Ask for permission or replace with cleared images before relying on those photographs in a public final.
+- Some chapter excerpts include brief question/prompt context; their timestamps correspond to the subtitle-derived recordings, and should be checked in a final listen.
