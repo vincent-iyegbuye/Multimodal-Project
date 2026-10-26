@@ -19,6 +19,7 @@ Then: source archive with four unabridged recordings, four transcripts, research
 - `chapters.css`: layout for new chapters, contextual listening, and four voices.
 - `script.js`: mobile navigation.
 - `chapters.js`: interactive four-voice comparison.
+- `audio-player.css` and `audio-player.js`: shared audio controls for the five chapter clips and four full interviews, with seeking, mute, playback speed and native controls when JavaScript is unavailable.
 - `assets/`: all four source recordings, including `interview-04.m4a` (public-sharing consent confirmed by interviewer).
 - `assets/moments/`: five short MP3 excerpts used by the chapter audio players.
 - `Interview_Transcripts_Accessibility.docx`: class accessibility transcript (review caption edits before submission).
