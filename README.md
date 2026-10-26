@@ -1,21 +1,19 @@
-# Far From Home — interview-led website (two interviews)
+# Far From Home — Three Students, Three Routes to Belonging
 
-The project is an editorial multimodal web essay built from two international-student interviews.
+ENGL 1301 Inquiry-Based Multimodal Project, October 2026. This is the published web essay (not a classroom rough draft). It contains **three interviews**, audio, accessible readable transcripts, local/academic sources, and a comparison of social connection, time and transportation.
 
-## Structure
-- `index.html`: essay, comparison, sources, and BOTH transcripts (edit research writing here).
-- `styles.css`: layout, colors, typography, audio cards, responsive design.
-- `script.js`: interactive three-homes selector, mobile menu and progressive audio detection.
-- `assets/interview-01.m4a`: first interview, approximately 5:07.
-- `assets/interview-02.m4a`: second interview, approximately 5:51.
-- `interview-transcript.txt`: interviewer-corrected first transcript.
-- `interview-02-transcript.txt`: second subtitle-based transcript; uncertain phrases flagged.
+## Files
+- `index.html`: the report and all three readable transcripts.
+- `styles.css`: layout and responsive design.
+- `script.js`: simple navigation and the three-homes selector.
+- `assets/interview-01.m4a`, `interview-02.m4a`, `interview-03.mp3`: audio.
+- `interview-transcript.txt` and `interview-02-transcript.txt`: editable first two transcripts.
+- `interview-03-transcript.txt`: Interview 03 reconstructed **non-verbatim** from automated captions; review audio to verify direct quotations.
 
-## Working locally
-Open `index.html` in Chrome or Edge, ideally using VS Code Live Server. Keep the assets folder beside the HTML file.
+To publish: upload the entire folder contents into the `main` branch repository root; preserve the `assets/` folder. GitHub Pages can publish directly from `main` / root. The player for the third interview points to `assets/interview-03.mp3`. The 4.6MB audio asset must also be uploaded.
 
-## Publishing to GitHub Pages
-The text/structure may be updated independently from media. When uploading `assets/interview-02.m4a`, use the GitHub file upload option in the assets folder or Git. The player automatically appears when the media is available. Verify that the participant's permission explicitly includes sharing the audio publicly.
+## Ethics and limitations
+Confirm each participant explicitly consented to *publicly publishing their audio*, not just being recorded for a class project. Withhold any recording lacking permission, even if the transcript is included anonymously. The images are credited photographs, not firsthand observations. All three participants originate from Nigeria; do not generalize to all international students. Interview 03 includes non-verbatim editing of automatically generated captions.
 
-## Editorial safeguards
-Interview 02 captions are automatic and contain errors, especially the answer about feeling at home. Avoid presenting the unclear portions as verbatim. The website distinguishes preliminary interpretation from research data, and photographs are credited reference images rather than field observations. This is a working draft, not generalizable research.
+## Class submission
+The course also requires a **separate Statement of Goals and Choices of at least 750 words**, plus a DOCX transcript when audio is part of the assignment. Those are separate from this website.
