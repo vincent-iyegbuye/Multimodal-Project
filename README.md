@@ -1,19 +1,24 @@
-# Far From Home — Three Students, Three Routes to Belonging
+# Far From Home — Four Interviews and Secondary Research
 
-ENGL 1301 Inquiry-Based Multimodal Project, October 2026. This is the published web essay (not a classroom rough draft). It contains **three interviews**, audio, accessible readable transcripts, local/academic sources, and a comparison of social connection, time and transportation.
+ENGL 1301 inquiry-based multimodal web essay, October 2026.
+
+## Published website
+https://vincent-iyegbuye.github.io/Multimodal-Project/
+
+The website has four participant interviews, audio players, four readable interview transcripts, interactive comparisons of home, verified university/local-source links and academic research about belonging.
 
 ## Files
-- `index.html`: the report and all three readable transcripts.
-- `styles.css`: layout and responsive design.
-- `script.js`: simple navigation and the three-homes selector.
-- `assets/interview-01.m4a`, `interview-02.m4a`, `interview-03.mp3`: audio.
-- `interview-transcript.txt` and `interview-02-transcript.txt`: editable first two transcripts.
-- `interview-03-transcript.txt`: Interview 03 reconstructed **non-verbatim** from automated captions; review audio to verify direct quotations.
+- `index.html` — research essay, TOR community feature, citations and transcripts.
+- `styles.css` — responsive editorial presentation.
+- `script.js` — navigation, home selector and media loading.
+- `assets/` — original interview audio. Interview 04 must exist as `assets/interview-04.m4a` for its player to appear.
+- `interview-transcript.txt`, `interview-02-transcript.txt`, `interview-03-transcript.txt` — earlier transcripts; the fourth transcript is included in the HTML and complete downloadable project package.
 
-To publish: upload the entire folder contents into the `main` branch repository root; preserve the `assets/` folder. GitHub Pages can publish directly from `main` / root. The player for the third interview points to `assets/interview-03.mp3`. The 4.6MB audio asset must also be uploaded.
+## Image credits / publication rights
+The campus photographs link to licensed CC BY-SA 4.0 Wikimedia Commons sources. TOR photos are **linked from the organization's own website** and attributed to the organization, but no general republication license was verified. Ask TOR for permission before relying on those photos in the final public project, or substitute permission-cleared images. Linked external image paths may change or block embedding.
 
-## Ethics and limitations
-Confirm each participant explicitly consented to *publicly publishing their audio*, not just being recorded for a class project. Withhold any recording lacking permission, even if the transcript is included anonymously. The images are credited photographs, not firsthand observations. All three participants originate from Nigeria; do not generalize to all international students. Interview 03 includes non-verbatim editing of automatically generated captions.
+## Research limitations
+Four interviews do not represent the university's entire international student population. Earlier participants' transcripts were interviewer-corrected; later transcripts include caption-derived paraphrase. Do not present unverified passages as verbatim. The website does not claim firsthand field observations that were not collected.
 
-## Class submission
-The course also requires a **separate Statement of Goals and Choices of at least 750 words**, plus a DOCX transcript when audio is part of the assignment. Those are separate from this website.
+## Assignment requirements
+The separately downloadable research-enhanced project contains a 919-word **editable proposed Statement of Goals and Choices** and an **Interview Transcripts Accessibility** Word document. These still need review for factual and transcription accuracy before class submission. GitHub repository files alone do not contain those Word documents.
