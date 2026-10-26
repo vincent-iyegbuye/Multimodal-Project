@@ -1,0 +1,16 @@
+/* The four-voice belonging comparison. Keeps each participant equally prominent. */
+#places .place-buttons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid #8c857a}
+#places .place-button{min-width:0;padding:16px 12px 18px;border-right:1px solid #8c857a;font-size:.89rem;line-height:1.3;overflow-wrap:break-word}
+#places .place-button:last-child{border-right:0}
+#places .place-button span{font-size:.68rem;display:block;margin-bottom:8px}
+#places .place-button:focus-visible{outline:3px solid #1e5364;outline-offset:-3px;z-index:1;position:relative}
+#places .place-story{min-height:390px}
+#places .place-story h3{font-size:clamp(1.95rem,2.6vw,2.75rem);line-height:1.16;margin:8px 0 18px}
+#places .place-story .home-evidence{margin:22px 0 0;padding:16px 19px;background:#ede8df;border-left:3px solid #a33930}
+#places .place-story .home-evidence-label{display:block;text-transform:uppercase;letter-spacing:.11em;color:#865248;font-size:.66rem;font-weight:800;margin-bottom:6px}
+#places .place-story .home-evidence p{margin:0;font-size:.88rem;line-height:1.65}
+#places .place-story .place-interpretation{margin:21px 0 17px}
+#places .home-transcript-link{font-size:.8rem;font-weight:800;text-decoration:underline;text-underline-offset:4px;color:#963a30}
+#places .home-compare-note{color:#6f6256;font-size:.8rem;margin-top:14px;line-height:1.6}
+@media(max-width:1100px){#places .place-button{padding:14px 9px;font-size:.82rem}}
+@media(max-width:550px){#places .place-buttons{grid-template-columns:repeat(2,minmax(0,1fr))}#places .place-button:nth-child(2){border-right:0}#places .place-button:nth-child(-n+2){border-bottom:1px solid #8c857a}#places .place-story{min-height:0;padding:24px}#places .place-story h3{font-size:2.1rem}}
