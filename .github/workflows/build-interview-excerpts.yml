@@ -1,0 +1,38 @@
+name: Build short interview audio excerpts
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/build-interview-excerpts.yml'
+      - 'assets/interview-02.m4a'
+      - 'assets/interview-04.m4a'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  excerpts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Create actual short MP3 files
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/moments
+          ffmpeg -nostdin -y -v error -ss 38 -i assets/interview-02.m4a -t 27 -vn -ac 1 -ar 22050 -c:a libmp3lame -b:a 32k assets/moments/moment-01-arriving.mp3
+          ffmpeg -nostdin -y -v error -ss 197 -i assets/interview-02.m4a -t 24 -vn -ac 1 -ar 22050 -c:a libmp3lame -b:a 32k assets/moments/moment-02-finding-people.mp3
+          ffmpeg -nostdin -y -v error -ss 373 -i assets/interview-04.m4a -t 54 -vn -ac 1 -ar 22050 -c:a libmp3lame -b:a 32k assets/moments/moment-03-getting-around.mp3
+          ffmpeg -nostdin -y -v error -ss 264 -i assets/interview-02.m4a -t 41 -vn -ac 1 -ar 22050 -c:a libmp3lame -b:a 32k assets/moments/moment-04-second-home.mp3
+          ffmpeg -nostdin -y -v error -ss 277 -i assets/interview-04.m4a -t 21 -vn -ac 1 -ar 22050 -c:a libmp3lame -b:a 32k assets/moments/moment-05-community-home.mp3
+      - name: Commit audio excerpts
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/moments/*.mp3
+          if ! git diff --cached --quiet; then
+            git commit -m "Add real short interview audio clips"
+            git push
+          fi
