@@ -57,3 +57,16 @@
   audio.addEventListener('error',()=>{audio.hidden=true;pending.hidden=false});
   audio.load();
 })();
+
+
+// Show interview 04's audio controls only after its recording is publicly available.
+(() => {
+ const player=document.getElementById('interview-04-audio');
+ const placeholder=document.getElementById('audio-04-pending');
+ if(!player||!placeholder) return;
+ const ready=()=>{player.hidden=false;placeholder.hidden=true;};
+ const missing=()=>{player.hidden=true;placeholder.hidden=false;};
+ player.addEventListener('loadedmetadata',ready);
+ player.addEventListener('error',missing);
+ player.load();
+})();
